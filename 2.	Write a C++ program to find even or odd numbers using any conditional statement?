@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    double num;
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+
+    if (num == static_cast<int>(num)) {
+        std::cout << "The number is " << (static_cast<int>(num) % 2 == 0 ? "Even" : "Odd") << ".\n";
+    } else {
+        std::cout << "Invalid input. Please enter an integer.\n";
+    }
+
+    return 0;
+}
