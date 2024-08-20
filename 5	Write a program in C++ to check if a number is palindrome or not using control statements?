@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+#include <algorithm>
+using namespace std;
+
+bool isPalindrome(string str) {
+    str.erase(remove_if(str.begin(), str.end(), static_cast<int(*)(int)>(&isalnum)), str.end());
+    
+    for (size_t i = 0; i < str.size(); ++i) {
+        str[i] = tolower(static_cast<unsigned char>(str[i]));
+    }
+    
+    size_t len = str.size();
+    for (size_t i = 0; i < len / 2; ++i) {
+        if (str[i] != str[len - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    string input;
+    cout << "Enter a number or word: ";
+    cin >> input;
+    cout << (isPalindrome(input) ? "It is a palindrome" : "It is not a palindrome") << endl;
+    return 0;
+}
