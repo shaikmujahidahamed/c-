@@ -1,0 +1,34 @@
+#include <iostream>
+#include <sstream>
+#include <limits>
+using namespace std;
+
+bool isValidInput(string input, double &celsius) {
+    stringstream ss(input);
+    ss >> celsius;
+    if (ss.fail() || !ss.eof()) {
+        return false;
+    }
+    return true;
+}
+
+double convertCelsiusToFahrenheit(double celsius) {
+    return (celsius * 9.0 / 5.0) + 32.0;
+}
+
+int main() {
+    string input;
+    double celsius;
+    
+    cout << "Enter temperature in Celsius: ";
+    cin >> input;
+    
+    if (isValidInput(input, celsius)) {
+        double fahrenheit = convertCelsiusToFahrenheit(celsius);
+        cout << "Temperature in Fahrenheit: " << fahrenheit << endl;
+    } else {
+        cout << "Invalid input. Please enter a valid number." << endl;
+    }
+    
+    return 0;
+}
