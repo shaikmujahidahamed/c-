@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, a = 0, b = 1, fib;
+    cin >> n;
+    if (n <= 0) cout << "Invalid input";
+    else if (n == 1) cout << a;
+    else if (n == 2) cout << b;
+    else {
+        for (int i = 3; i <= n; i++) fib = a + b, a = b, b = fib;
+        cout << fib;
+    }
+    return 0;
+}
