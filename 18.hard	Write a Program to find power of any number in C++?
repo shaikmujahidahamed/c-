@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double base, exponent;
+    cout << "Input the base: ";
+    cin >> base;
+    cout << "Input the exponent: ";
+    cin >> exponent;
+
+    if (cin.fail()) {
+        cout << "Invalid input. Please enter numeric values." << endl;
+    } else {
+        double result = pow(base, exponent);
+        cout << "Result: " << result << endl;
+    }
+    return 0;
+}
