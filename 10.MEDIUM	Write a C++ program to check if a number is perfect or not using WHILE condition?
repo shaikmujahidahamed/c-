@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, sum = 0, i = 1;
+    cout << "Enter a number: "; cin >> num;
+
+    if(num > 0) {
+        while (i < num) {
+            if (num % i == 0) sum += i;
+            i++;
+        }
+        cout << num << (sum == num ? " is" : " is not") << " a perfect number." << endl;
+    } else cout << "Invalid input." << endl;
+
+    return 0;
+}
