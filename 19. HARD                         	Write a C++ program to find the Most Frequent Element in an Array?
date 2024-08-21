@@ -1,0 +1,8 @@
+Sample Input	Input the base: 23
+Input the exponent: 4
+Sample Output	279841
+Test Case	1. base = 5, exponent = 4
+	2. base =0. 5, exponent = 14
+	3. base = A, exponent = 4
+	4. base = 5, exponent = 0
+	5. base = 66.6, exponent = -4 
