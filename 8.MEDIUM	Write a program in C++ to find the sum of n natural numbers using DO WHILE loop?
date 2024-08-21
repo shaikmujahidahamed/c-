@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum = 0, num, i = 0;
+    cout << "Enter the value of n: "; cin >> n;
+
+    if(n > 0) {
+        do {
+            cin >> num; sum += num;
+        } while (++i < n);
+        cout << "Sum: " << sum << endl;
+    } else cout << "Invalid input." << endl;
+
+    return 0;
+}
+
+
