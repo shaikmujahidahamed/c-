@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, bit;
+    cin >> num >> bit;
+    if (bit < 0) cout << "Invalid bit position";
+    else cout << "Bit set Successfully\nAnswer: " << (num | (1 << bit));
+    return 0;
+}
