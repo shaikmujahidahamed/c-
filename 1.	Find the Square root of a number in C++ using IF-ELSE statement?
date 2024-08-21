@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double num;
+    cin >> num;
+
+    if (num < 0)
+        cout << "Invalid input";
+    else
+        cout << sqrt(num);
+
+    return 0;
+}
